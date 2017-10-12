@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sleep 1
+        svn(poll: true, url: 'svn://apphostsubversion2.orgdv.din.de/Docker/apps/vb.beuth.de/branches/test_branch/run', changelog: true)
       }
     }
   }

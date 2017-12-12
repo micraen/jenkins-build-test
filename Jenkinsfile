@@ -8,9 +8,16 @@ pipeline {
   }
   stages {
     stage('build') {
+      environment {
+        A = 'a'
+      }
       steps {
         sh 'hostname'
+        sh 'env'
       }
     }
+  }
+  environment {
+    AA = 'aa'
   }
 }
